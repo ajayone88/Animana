@@ -1,0 +1,127 @@
+<!-- Form for Adding Patient -->
+<form class="add-patient" (ngSubmit)="onSubmit(f);" #f="ngForm">
+  <div class="add-patient__box">
+    <!-- Close Icon to close the model -->
+    <div class="add-patient__box--close">
+      <div class="close" (click)="navigateBack()"></div>
+    </div>
+    <!-- End of Close icon to close the model -->
+
+    <!-- Field to add Name -->
+    <div class="add-patient__box--group">
+      <h4>Add Patient</h4>
+      <label for="name" class="add-patient__box--group--label">Name * :</label>
+      <input type="text" id="name" ngModel name="name" #name="ngModel" required/>
+      <div *ngIf="name.invalid && (name.dirty || name.touched || f.submitted)" class="warning">
+        <div *ngIf="name.errors.required">
+          Name is mandatory !
+        </div>
+      </div>
+    </div>
+    <!-- End of field to add the Name -->
+
+    <!-- Class -->
+    <div class="add-patient__box--group">
+      <label for="class" class="add-patient__box--group--label">Class : </label>
+      <input type="text" id="class" ngModel name="class"/>
+    </div>
+    <!--End of class -->
+
+    <!-- Client Id -->
+    <div class="add-patient__box--group">
+      <label for="clientId" class="add-patient__box--group--label">Client : </label>
+      <select id="clientId" ngModel name="clientId" #clientId="ngModel" required>
+        <option *ngFor="let client of clients" [ngValue]="client.id">{{client.firstName + " " + client.lastName}}</option>
+      </select>
+      <div *ngIf="clientId.invalid && (clientId.dirty || clientId.touched || f.submitted)" class="warning">
+        <div *ngIf="clientId.errors.required">
+          Client is mandatory !
+        </div>
+      </div>
+    </div>
+    <!-- End of Client Id -->
+
+    <!-- Species -->
+    <div class="add-patient__box--group">
+      <label for="species" class="add-patient__box--group--label">Species :</label>
+      <input type="text" id="species" ngModel name="species"/>
+    </div>
+    <!-- End of Species -->
+
+    <!-- Date of Birth -->
+    <div class="add-patient__box--group">
+      <label for="dateOfBirth" class="add-patient__box--group--label">Date of Birth * :</label>
+      <input type="date" id="dateOfBirth" ngModel name="dateOfBirth" (input)="validateDateOfBirth(dateOfBirth)" #dateOfBirth="ngModel" required/>
+      <div *ngIf="dateOfBirth.invalid && (dateOfBirth.dirty || dateOfBirth.touched || f.submitted)" class="warning">
+        <div *ngIf="dateOfBirth.errors.required">
+         Date of birth is mandatory !
+        </div>
+      </div>
+    </div>
+    <!-- End of Date of Birth -->
+
+    <!-- CrossBreed -->
+    <div class="add-patient__box--group">
+      <label class="add-patient__box--group--label">CrossBreed :</label>
+      <input type="radio"  name="crossbreed" ngModel value="true">Yes
+      <br>
+      <input type="radio"  name="crossbreed" ngModel value="false">No
+      <br>
+    </div>
+    <!-- End of cross Breed -->
+
+    <!-- Gender -->
+    <div class="add-patient__box--group">
+      <label class="add-patient__box--group--label">Gender :</label>
+      <input type="radio" name="gender" ngModel value="male"> Male
+      <br>
+      <input type="radio" name="gender" ngModel value="female"> Female
+      <br>
+    </div>
+    <!-- End of Gender -->
+
+    <!-- Warning -->
+    <div class="add-patient__box--group">
+      <label class="add-patient__box--group--label">Warning :</label>
+      <textarea type="textarea" name="warning" ngModel></textarea>
+    </div>
+    <!-- ENd of Warning -->
+
+    <!-- Remarks -->
+    <div class="add-patient__box--group">
+      <label class="add-patient__box--group--label">Remarks :</label>
+      <textarea type="textarea" name="remark" ngModel></textarea>
+    </div>
+    <!-- End of Remarks -->
+
+    <!-- Color -->
+    <div class="add-patient__box--group">
+      <label class="add-patient__box--group--label">Color :</label>
+      <input type="text" name="color" ngModel/>
+    </div>
+    <!-- End of Color -->
+
+    <!-- Active -->
+    <div class="add-patient__box--group">
+      <label class="add-patient__box--group--label">Active :</label>
+      <input type="radio" name="active"  ngModel value="true">Active
+      <br>
+      <input type="radio" name="active" ngModel value="false">Not Active
+      <br>
+    </div>
+    <!-- End of Active -->
+
+    <!--Submit Input -->
+    <div class="add-patient__box--button">
+      <input type="submit"  value="Add Patient"/>
+    </div>
+    <!-- End of Submit Input -->
+
+    <!-- Error section to display warning -->
+    <div *ngIf="f.invalid && f.submitted" class="warning">
+        Mandatory fields are empty!
+    </div>
+    <!-- End of warning section -->
+  </div>
+</form>
+<!-- End of form for adding patient -->

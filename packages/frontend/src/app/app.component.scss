@@ -1,0 +1,33 @@
+// These style are used for the App HTML Page
+.main{
+  display:flex;
+  flex-direction:column;
+  max-width:1035px;
+  margin:auto;
+  min-height:100vh;
+
+  &__header{
+
+  }
+
+  &__error{
+      background-color:lightyellow;
+      padding:0px 12px;
+    h1{
+      color:red;
+      margin:4px;
+    }
+    p{
+      color:red;
+      margin:4px;
+    }
+  }
+
+  &__section{
+    flex-grow:1;
+  }
+
+  &__footer{
+
+  }
+}

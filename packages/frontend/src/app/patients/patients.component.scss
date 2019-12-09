@@ -1,0 +1,275 @@
+// These styles are used for Patients HTML page.
+.patients{
+  padding:24px 12px;
+
+  &__child{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
+
+    &__add{
+      position:fixed;
+      background-color: rgba(0,0,0,0.5);
+      width:100%;
+      height:100%;
+
+      &--box{
+        margin:100px 12px;
+        background-color: #fff;
+        padding:12px;
+
+
+
+      }
+    }
+
+    &__delete{
+      position:fixed;
+      background-color: rgba(0,0,0,0.5);
+      width:100%;
+      height:100%;
+
+      &--box{
+        margin:100px auto;
+        background-color: #fff;
+        max-width:400px;
+        max-height:400px;
+        padding:16px;
+
+        &--heading{
+
+        }
+
+        &--message{
+
+        }
+
+        &--button{
+
+        }
+
+      }
+    }
+  }
+
+  &__search{
+      display:flex;
+      justify-content:space-between;
+
+      div{
+        display:flex;
+        justify-content: center;
+        background-color: #00857a;
+        border-radius: 10px;
+        align-self:center;
+        width:150px;
+        height:40px;
+        label{
+          color:white;
+          align-self:center;
+        }
+      }
+
+      div:hover,
+      div:active{
+        background-color:#e9f0f0;
+        label{
+          color:black;
+        }
+      }
+
+      input[type=text]{
+        align-self:center;
+        width: 200px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        align-items:flex-end;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+  }
+
+  @media(max-width:768px){
+      &__search{
+          flex-direction: column;
+
+          div{
+            width:100%;
+          }
+
+          input[type=text]{
+            width:100%;
+          }
+      }
+  }
+
+  &__card{
+    position:relative;
+    animation: fadeIn 1s linear forwards;
+    display:flex;
+    margin:8px 0px;
+    padding:12px;
+    box-shadow: 0 0 8px 0 rgba(34,34,34,0.02),0 8px 16px 0 rgba(34,34,34,0.2);
+
+    &--delete{
+      position:absolute;
+      padding:5px;
+      border:1px solid transparent;
+      top:20px;
+      right:20px;
+    }
+
+    &--delete:hover,
+    &--delete:active{
+        cursor:pointer;
+        border:1px solid black;
+    }
+
+    &--image{
+      width:200px;
+      height:200px;
+      align-self: center;
+      margin: 0 24px;
+      box-shadow: 0 0 2px 2px #e9f0f0;
+    }
+
+    &__details{
+      align-self: center;
+      margin: 0 24px;
+      div{
+        margin:8px 0px;
+      }
+
+      span:last-child{
+        font-weight:bold;
+      }
+
+      a{
+        cursor:pointer;
+      }
+
+      a:hover,
+      a:active{
+        color:cadetblue;
+      }
+
+
+    }
+
+    &__address {
+      margin: 0 24px;
+      align-self: center;
+      div{
+        margin:8px 0px;
+      }
+
+      span:last-child{
+        font-weight:bold;
+      }
+    }
+  }
+
+  @media(max-width:768px){
+    &__card{
+      flex-direction: column;
+
+      &--delete{
+        top:250px;
+      }
+
+      &--image{
+        margin:8px 12px;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-self: center;
+
+        div{
+          align-self:center;
+        }
+
+      }
+
+      &__details{
+        margin:8px 12px;
+        align-self: flex-start;
+
+        div{
+          margin:8px 0px;
+        }
+
+        span:last-child{
+          font-weight:bold;
+        }
+      }
+
+      &__address {
+        margin:8px 12px;
+        align-self: flex-start;
+
+        span:last-child{
+          font-weight:bold;
+        }
+
+      }
+    }
+  }
+
+
+
+  &__card:hover,
+  &__card:active{
+    background-color: #edf7f7;
+    margin:8px 0px;
+    padding:12px;
+    box-shadow: 0 0 8px 0 rgba(34,34,34,0.02),0 8px 16px 0 rgba(34,34,34,0.2);
+  }
+
+
+  &__button{
+    margin-top:32px;
+    display:flex;
+    justify-content: space-between;
+    &--previous{
+
+    }
+
+    &--next{
+
+    }
+
+    &--index{
+      font-weight:bold;
+      font-size:22px;
+    }
+
+    @media(max-width:768px){
+      &--index{
+        display:none;
+      }
+    }
+  }
+}
+
+.button{
+  width:140px;
+  height:40px;
+}
+
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+    //transform: translateX(200px);
+  }
+  50%{
+    opacity: 0.5;
+    //transform: translateX(0px);
+  }
+  100%{
+    opacity:1;
+  }
+}
+

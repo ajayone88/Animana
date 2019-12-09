@@ -1,0 +1,77 @@
+<!-- Client View -->
+<div class="clients">
+
+    <!-- Child view router outlet-->
+    <div class="clients__child">
+      <router-outlet></router-outlet>
+    </div>
+    <!--End of child view router outlet-->
+
+    <!-- Search Div -->
+    <div class="clients__search">
+      <input type="text" placeholder="Search"  (input)="setFilter($event)" >
+    </div>
+    <!-- End of Search Div -->
+
+    <!-- Client Card  Repeat -->
+    <div *ngFor="let client of limitedClient"  class="clients__card">
+      <!-- Image div -->
+      <div class="clients__card--image">
+        <div class="customer"></div>
+      </div>
+      <!-- End of image div -->
+
+      <!-- Client fields -->
+      <div class="clients__card__details">
+        <div>
+          <span>Initials: </span>
+          <span>{{ client.initials}}</span>
+        </div>
+
+        <!-- Navigate to client view -->
+        <div (click)="navigateToClient(client.id)">
+          <span>First Name: </span>
+          <span><a>{{ client.firstName}}</a></span>
+        </div>
+        <!-- End of navigate to client view -->
+
+        <div>
+          <span>Last Name: </span>
+          <span>{{ client.lastName}}</span>
+        </div>
+
+        <div>
+          <span>Start Date: </span>
+          <span>{{ client.startDate}}</span>
+        </div>
+
+        <div>
+          <span>Active: </span>
+          <span *ngIf="client.active">Active</span>
+          <span *ngIf="!client.active">Not Active</span>
+        </div>
+      </div>
+      <!-- Address -->
+      <div  class="clients__card__address">
+        <span>Address: </span>
+        <div *ngFor="let key of object.keys(client.address)">
+          <span>{{ key + " : " }}</span>
+          <span>{{ client.address[key] }}</span>
+        </div>
+      </div>
+      <!-- End of address -->
+      <!--End of client fields -->
+    </div>
+    <!-- End of  client card  Repeat -->
+    <!-- Button Section -->
+    <div class="clients__button">
+      <button [ngStyle]="{ visibility : previous === 0 ? 'hidden' : 'visible'}" class="button clients__button--previous" (click)="setPrevious();">Previous</button>
+      <div class="clients__button--index">
+        <span>{{'Clients : '+ (maxLength === 0 ? 0 : previous + 1 ) +" to "+ ((next + 1) <= maxLength ? next + 1 : maxLength )+ " / "}}</span>
+        <span>{{ 'Total : '+ maxLength}}</span>
+      </div>
+      <button [ngStyle]="{ visibility : (next + 1)  >= maxLength ? 'hidden' : 'visible'}" class="button clients__button--next" (click)="setNext();">Next</button>
+    </div>
+    <!-- End of button Section -->
+</div>
+<!-- End of client View -->

@@ -1,0 +1,55 @@
+<div class="client">
+  <div class="client__box">
+    <div *ngIf="client" class="client__box__details">
+      <div class="close client__box__details--closeImage" (click)="navigateBack()"></div>
+      <h1>Client Details</h1>
+      <div>
+        <div class="">
+          <div class="customer" style="width:104px; height:104px;"></div>
+        </div>
+      </div>
+      <div>
+        <span>Initials: </span>
+        <span>{{ client.initials}}</span>
+      </div>
+      <div>
+        <span>First Name: </span>
+        <span><a>{{ client.firstName}}</a></span>
+      </div>
+      <div>
+        <span>Last Name: </span>
+        <span>{{ client.lastName}}</span>
+      </div>
+      <div>
+        <span>Start Date: </span>
+        <span>{{ client.startDate}}</span>
+      </div>
+      <div>
+        <span>Active: </span>
+        <span *ngIf="client.active">Active</span>
+        <span *ngIf="!client.active">Not Active</span>
+      </div>
+      <div  class="">
+        <span>Address: </span>
+        <div *ngFor="let key of object.keys(client.address)">
+          <span>{{ key + " : " }}</span>
+          <span>{{ client.address[key] }}</span>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="client__box__patientDetails">
+     <h1>Patients List</h1>
+     <ul>
+       <li *ngFor="let patient of patients; let i = index" (click)="openPatient(patient.id)">{{"(" + (i+1) + ") " + patient.name }}</li>
+     </ul>
+    </div>
+    <hr>
+    <div class="client__box__invoiceDetails">
+      <h1>Invoice List</h1>
+      <ul>
+        <li *ngFor="let invoice of invoices; let i = index" (click)="openInvoice(invoice.number)">{{"(" + (i+1) + ") " +invoice.number }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

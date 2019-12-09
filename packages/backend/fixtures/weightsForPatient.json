@@ -1,0 +1,40 @@
+{
+    "weights":
+    [{
+        "id":"1",
+        "weight":"10",
+        "unit": "kg",
+        "date": "22-10-2002",
+        "patientId": "1"
+    },{
+        "id":"2",
+        "weight":"11",
+        "unit": "kg",
+        "date": "22-10-2004",
+        "patientId": "1"
+    },{
+        "id":"3",
+        "weight":"13",
+        "unit": "kg",
+        "date": "22-10-2005",
+        "patientId": "1"
+    },{
+        "id":"4",
+        "weight":"15",
+        "unit": "kg",
+        "date": "22-10-2006",
+        "patientId": "1"
+    },{
+        "id":"5",
+        "weight":"13",
+        "unit": "kg",
+        "date": "22-10-2007",
+        "patientId": "1"
+    },{
+        "id":"6",
+        "weight":"12.5",
+        "unit": "kg",
+        "date": "22-10-2010",
+        "patientId": "1"
+    }]
+}

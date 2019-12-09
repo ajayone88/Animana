@@ -1,0 +1,62 @@
+<div class="patient">
+  <div class="patient__box">
+    <div class="close patient__box--closeImage" (click)="navigateBack()"></div>
+    <div *ngIf="patient" class="patient__box--patient">
+      <h1>Patient Details</h1>
+      <div class="" >
+        <div class="firstAid" style="width:104px; height:130px;"></div>
+      </div>
+      <div>
+        <span>Name: </span>
+        <span><a>{{ patient.name}}</a></span>
+      </div>
+
+      <div>
+        <span>Class: </span>
+        <span>{{ patient.class}}</span>
+      </div>
+
+      <div>
+        <span>ClientId: </span>
+        <span>{{ patient.clientId}}</span>
+      </div>
+
+      <div>
+        <span>Species: </span>
+        <span>{{ patient.species}}</span>
+      </div>
+
+      <div>
+        <span>Date of Birth: </span>
+        <span>{{ patient.dateOfBirth}}</span>
+      </div>
+
+      <div>
+        <span>Active: </span>
+        <span *ngIf="patient.active">Active</span>
+        <span *ngIf="!patient.active">Not Active</span>
+      </div>
+    </div>
+    <hr>
+    <div class="patient__box--weight">
+      <h1>Weight Details</h1>
+      <ul>
+        <li *ngFor="let weight of weights; let i = index">{{"(" + ( i + 1 ) +")" + "  "+ weight.date + " | " + weight.weight + "  "+ weight.unit }}</li>
+      </ul>
+    </div>
+    <hr>
+   <div class="patient__box--call">
+     <h1>Call Details</h1>
+     <ul>
+       <li *ngFor="let call of calls; let i = index">{{"("+ (i+1) +") "+call.subject }}</li>
+     </ul>
+   </div>
+    <hr>
+   <div class="patient__box--product">
+     <h1>Product Details</h1>
+     <ul>
+       <li *ngFor="let product of products; let i = index">{{"("+ (i+1) +") "+product.name}}</li>
+     </ul>
+   </div>
+  </div>
+</div>

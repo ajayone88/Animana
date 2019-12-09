@@ -1,0 +1,43 @@
+{
+    "invoices": [{
+            "id": "9",
+            "number": "INV-23",
+            "amount": "130.5",
+            "vat": "15.2",
+            "clientId": "1",
+            "patientId": "1",
+            "date": "10-03-2005"
+        }, {
+            "id": "8",
+            "number": "INV-25",
+            "amount": "15",
+            "vat": "1.5",
+            "clientId": "1",
+            "patientId": "",
+            "date": "15-06-2010"
+        }, {
+            "id": "7",
+            "number": "INV-01",
+            "amount": "61.25",
+            "vat": "12.6",
+            "clientId": "1",
+            "patientId": "1",
+            "date": "20-11-2009"
+        }, {
+            "id": "6",
+            "number": "INV-255",
+            "amount": "15.15",
+            "vat": "1.5",
+            "clientId": "1",
+            "patientId": "",
+            "date": "03-05-2009"
+        }, {
+            "id": "15",
+            "number": "INV-16",
+            "amount": "1.25",
+            "vat": ".25",
+            "clientId": "1",
+            "patientId": "1",
+            "date": "15-05-2018"
+        }]
+}

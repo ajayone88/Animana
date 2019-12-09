@@ -1,0 +1,18 @@
+{
+    "calls": [{
+            "id": "5",
+            "date": "26-04-2011",
+            "subject": "Vaccination reminder",
+            "patientId": "1"
+        }, {
+            "id": "3",
+            "date": "12-02-2014",
+            "subject": "Called about our special offer - fitness for dogs",
+            "patientId": "1"
+        }, {
+            "id": "7",
+            "date": "22-01-2015",
+            "subject": "Called to wish the patient happy birthday",
+            "patientId": "1"
+        }]
+}

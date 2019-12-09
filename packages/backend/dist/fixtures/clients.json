@@ -1,0 +1,71 @@
+{ "clients": [{
+            "id": "1",
+            "firstName": "John",
+            "lastName": "Doe",
+            "title": "Mr",
+            "initials": "JD",
+            "address": {
+                "street": "Long 1233",
+                "city": "Los Angeles",
+                "zip": "90210"
+            },
+            "startDate": "22-05-2005",
+            "active": true
+        },
+        {
+            "id": "2",
+            "firstName": "Pete",
+            "lastName": "Smith",
+            "title": "",
+            "initials": "PS",
+            "address": {
+                "street": "Short 9",
+                "city": "Johanesburg",
+                "zip": "123456"
+            },
+            "startDate": "02-02-2010",
+            "active": true
+        },
+        {
+            "id": "3",
+            "firstName": "",
+            "lastName": "Johnson",
+            "title": "Mrs",
+            "initials": "",
+            "address": {
+                "street": "Stationstraat 3",
+                "city": "Amsterdam",
+                "zip": "1055VT"
+            },
+            "startDate": "12-04-2009",
+            "active": false
+        },
+        {
+            "id": "4",
+            "firstName": "Eva",
+            "lastName": "Smit",
+            "title": "Miss",
+            "initials": "ES",
+            "address": {
+                "street": "Verzetstraat 1",
+                "city": "Hoofddorp",
+                "zip": "2132EV"
+            },
+            "startDate": "05-05-2007",
+            "active": true
+        },
+        {
+            "id": "5",
+            "firstName": "Jake",
+            "lastName": "Pitt",
+            "title": "",
+            "initials": "JP",
+            "address": {
+                "street": "Middelweg 50",
+                "city": "Haarlem",
+                "zip": "1962AZ"
+            },
+            "startDate": "22-02-2015",
+            "active": true
+        }]
+}

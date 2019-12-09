@@ -1,0 +1,28 @@
+{
+    "patients":
+    [{
+      "id": "1",
+      "clientId": "1",
+      "name": "Woef",
+      "class": "Mammal",
+      "species": "Canine",
+      "dateOfBirth": "22-01-2010",
+      "active": true
+    },{
+      "id": "2",
+      "clientId": "1",
+      "name": "Miauw",
+      "class": "Mammal",
+      "species": "Feline",
+      "dateOfBirth": "12-10-2015",
+      "active": true
+    },{
+      "id": "3",
+      "clientId": "1",
+      "name": "Moo",
+      "class": "Mammal",
+      "species": "Cow",
+      "dateOfBirth": "10-10-2013",
+      "active": false
+    }]
+}

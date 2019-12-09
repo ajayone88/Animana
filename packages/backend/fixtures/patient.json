@@ -1,0 +1,16 @@
+{
+    "patient":
+    {
+        "id": "1",
+        "name": "Woef",
+        "class": "Mammal",
+        "species": "Canine",
+        "dateOfBirth": "22-01-2010",
+        "crossBreed": false,
+        "gender": "male",
+        "warning": "Alergic to cats",
+        "remarks": "Barks",
+        "colour": "black",
+        "active": true
+    }
+}

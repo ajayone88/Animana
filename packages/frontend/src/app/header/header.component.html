@@ -1,0 +1,36 @@
+<! -- Header -->
+<div class="header">
+  <!-- Label to display the app name -->
+  <div class="header__home">
+    <a  class="header__home--anchor" href="index.html">Animana</a>
+  </div>
+  <!-- End of Label -->
+  <!-- Header Navigation on Large screen -->
+  <nav class="header__nav">
+    <ul class="header__nav__items">
+      <li class="header__nav__items--item" routerLink="/home"  routerLinkActive="active">Home</li>
+      <li class="header__nav__items--item" routerLink="/clients"  routerLinkActive="active">Clients</li>
+      <li class="header__nav__items--item" routerLink="/patients" routerLinkActive="active">Patients</li>
+      <li class="header__nav__items--item" routerLink="/invoices" routerLinkActive="active">Invoices</li>
+    </ul>
+  </nav>
+  <!-- End of Header Navigation -->
+  <!-- Burger section-->
+  <div class="header__burger" (click)="showMenu = !showMenu;">
+    <span class="header__burger--line"></span>
+    <span class="header__burger--line"></span>
+    <span class="header__burger--line"></span>
+  </div>
+  <!-- End of burger header section -->
+  <!-- Burger header menu values -->
+  <div class="header__burgerList" *ngIf="showMenu" [@openClose]="showMenu ? 'open' : 'close'">
+    <ul class="header__burgerList__items">
+      <li class="header__burgerList__items--item" routerLink="/home"  routerLinkActive="active">Home</li>
+      <li class="header__burgerList__items--item" routerLink="/clients"  routerLinkActive="active">Clients</li>
+      <li class="header__burgerList__items--item" routerLink="/patients" routerLinkActive="active">Patients</li>
+      <li class="header__burgerList__items--item" routerLink="/invoices" routerLinkActive="active">Invoices</li>
+    </ul>
+  </div>
+  <!-- End of burger header menu values -->
+</div>
+<!-- End of Header -->

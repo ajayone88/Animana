@@ -1,0 +1,18 @@
+{ "client": {
+        "id": "1",
+        "firstName": "John",
+        "lastName": "Doe",
+        "title": "Mr",
+        "initials": "JD",
+        "address": {
+            "street": "Long 1233",
+            "city": "Los Angeles",
+            "zip": "90210"
+        },
+        "phone": "0123-456789",
+        "business": "false",
+        "iban": "NL47RABO0123456789",
+        "startDate": "22-05-2005",
+        "active": true
+    }
+}

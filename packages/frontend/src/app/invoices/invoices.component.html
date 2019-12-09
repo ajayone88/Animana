@@ -1,0 +1,72 @@
+<!-- Invoices -->
+<div class="invoices">
+
+  <!-- Invoices child router outlet -->
+  <div class="invoices__child">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- End of invoice child router outlet -->
+
+  <!-- Search -->
+  <div class="invoices__search">
+    <input type="text" placeholder="Search"  (input)="setFilter($event)" >
+  </div>
+  <!-- End of search box -->
+
+  <!-- Repeat for Invoices -->
+  <div *ngFor="let invoice of limitedInvoices"  class="invoices__card">
+
+    <!-- Invoice Icon -->
+    <div class="invoices__card--image">
+      <div class="invoiceIcon"></div>
+    </div>
+    <!-- End of Invoice Icon -->
+
+    <!-- Invoice Details -->
+    <div class="invoices__card__details">
+      <div (click)="navigateToPatient(invoice.number)">
+        <span>Invoice No: </span>
+        <span><a>{{ invoice.number}}</a></span>
+      </div>
+
+      <div>
+        <span>Amount : </span>
+        <span>{{ invoice.amount}}</span>
+      </div>
+
+      <div>
+        <span>Vat : </span>
+        <span>{{ invoice.vat}}</span>
+      </div>
+
+      <div>
+        <span>Client Id : </span>
+        <span>{{ invoice.clientId}}</span>
+      </div>
+
+      <div>
+        <span>Patient Id :</span>
+        <span>{{ invoice.patientId}}</span>
+      </div>
+
+      <div>
+        <span>Date : </span>
+        <span>{{ invoice.date}}</span>
+      </div>
+    </div>
+    <!-- End of Invoice details-->
+  </div>
+  <!-- End of repeat details -->
+
+  <!-- Button Section -->
+  <div class="invoices__button">
+    <button [ngStyle]="{ visibility : previous === 0 ? 'hidden' : 'visible'}" class="button invoices__button--previous" (click)="setPrevious();">Previous</button>
+    <div class="invoices__button--index">
+      <span>{{'Clients : '+ (maxLength === 0 ? 0 : previous + 1 ) +" to "+ ((next + 1) <= maxLength ? next + 1 : maxLength )+ " / "}}</span>
+      <span>{{ 'Total : '+ maxLength}}</span>
+    </div>
+    <button [ngStyle]="{ visibility : (next + 1)  >= maxLength ? 'hidden' : 'visible'}" class="button invoices__button--next" (click)="setNext();">Next</button>
+  </div>
+  <!-- End of button section -->
+</div>
+<!-- End of invoice -->

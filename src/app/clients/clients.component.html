@@ -1,0 +1,22 @@
+<div class="row my-4">
+    <div class="col-md-6">
+        <ul class="list-group">
+            <li *ngFor="let client of clients; let i = index;" class="list-group-item" (click)="onSelect(i)">
+               <div class="d-flex justify-content-start">
+                    <div class="icon-box mr-2 flex-shrink-0">
+                        <img [src]="client.src"   style="width:100%; height:100%;" alt="client.name" />
+                    </div>
+                    <div class="details-box flex-grow-1">
+                        <ul class="list-group">
+                            <li class="list-group-item">{{client.name}}</li>
+                            <li class="list-group-item">{{client.status}}</li>
+                          </ul>
+                    </div>
+               </div>
+            </li>
+          </ul>
+    </div>
+    <div class="col-md-6">
+        <router-outlet></router-outlet>
+    </div>
+</div>
